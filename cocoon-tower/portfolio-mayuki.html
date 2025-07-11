@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>鶴田真雪ポートフォリオ</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div id="webgl-container"></div>
+    <div id="splash-screen">
+      <h1>PORTFOLIO</h1>
+      <div class="arrow-down"></div>
+    </div>
+    <main id="main-content">
+      <section id="portfolio-detail" class="content-section">
+        <article class="portfolio-header">
+          <img
+            src="images/mayuki.jpg"
+            alt="鶴田真雪のポートフォリオ画像"
+            class="profile-image"
+          />
+          <div class="header-text">
+            <h1>鶴田真雪</h1>
+            <p>Web科</p>
+          </div>
+        </article>
+
+        <article class="portfolio-intro">
+          <p>
+            PROFILEをご覧いただき、ありがとうございます。
+            一つひとつの制作に真剣に向き合い、学びながら成長していく姿勢を大切にし、より良い表現を追求しています。
+            最近制作した作品をご紹介します。
+          </p>
+        </article>
+
+        <article class="portfolio-project">
+          <h2>3D制作</h2>
+          <p>
+            本作品はBlenderを使用して制作しました。WEBサイトに3D素材を挿入することで、より視覚的に魅力のあるサイトを製作できると考え、勉強を始めています。
+          </p>
+          <p>
+            「クマが歩く3Dアニメーション」では、手足の角度や高さだけでなく、体を少し左右に動かすことで、より自然な歩行に見えるよう工夫しました。「コーヒーカップ」は、丸みを帯びたデザインの練習として制作したものです。
+          </p>
+          <p>
+            現在は、こうした丸みのある3Dデザインを、さらに滑らかに動かすアニメーション技術を学んでいます。
+          </p>
+          <div class="facility-gallery">
+            <video controls autoplay muted loop>
+              <source src="images/turuta-3d-kuma.mp4" type="video/mp4" />
+              お使いのブラウザは動画タグをサポートしていません。
+            </video>
+            <img src="images/turuta-3d-kafe.png" alt="3Dコーヒーカップ" />
+          </div>
+        </article>
+
+        <article class="portfolio-project">
+          <h2>映画サイト制作</h2>
+          <p>
+            映画『BLUE
+            GIANT』の魅力を伝えるWEBサイトを製作しました。サイトの「見やすさ」を第一に考え、Blu-ray＆DVDやコミックスといった注目情報をトップに配置。また、グラデーションを活用して文字と画像のどちらも引き立つよう工夫しました。
+          </p>
+          <p>
+            見やすさだけでなく、視覚的な楽しさにもこだわっています。画像をスライドさせたり、テキストをフワッと表示させたりするアニメーションを導入。特に映画の感想コメントは、単なるテキスト表示では面白みに欠けるため、IllustratorとAdobe
+            Expressでレコード風のデザインを作成し、クリックすると内容が現れるインタラクティブな仕掛けにしました。
+          </p>
+          <p>
+            サイト全体のカラーを統一し、細部までこだわることで、まとまりのあるデザインに仕上がったと感じています。
+          </p>
+          <div class="facility-gallery">
+            <img
+              src="images/turuta-eiga.png"
+              alt="映画サイトのスクリーンショット"
+            />
+            <img
+              src="images/turuta-3d-kuma.png"
+              alt="映画サイトのスクリーンショット"
+            />
+          </div>
+        </article>
+
+        <div class="back-link">
+          <a href="index.html#portfolios" class="button"
+            >← ポートフォリオ一覧へ</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

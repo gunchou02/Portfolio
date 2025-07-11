@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="映画ザ・バットマンオフィシャルサイト">
+    <meta name="keywords" content="ザ・バットマン, 映画, ロードショウ">
+    <title>「 天気の子 」</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-wrapper">
+        <div class="header-logo">
+          <h1>
+            <a href="index.html">
+              <img src="images/img-logo.png" alt="天気の子">
+            </a>
+          </h1>
+        </div>
+        <nav class="navigation-main">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="story.html">STORY</a></li>
+            <li><a href="characters.html">CHARACTERS</a></li>
+            <li><a href="voice-cast.html">VOICE CAST</a></li>
+            <li><a href="teaser.html">TEASER</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Main Visual -->
+    <div id="slideshow" class="main-visual">
+      <img src="images/mainvisual.jpg" alt="Slideshow Image 1" class="active">
+      <img src="images/mainvisual_2.jpg" alt="Slideshow Image 2">
+    </div>
+
+    <!-- Feature Area -->
+    <div class="feature-area">
+      <section class="feature-area-section">
+        <a href="story.html">
+          <h2>STORY</h2>
+          <div class="images-wrapper">
+            <img src="images/feature-story.jpg" alt="ストーリーイメージ">
+          </div>
+        </a>
+      </section>
+      <section class="feature-area-section">
+        <a href="characters.html">
+          <h2>CHARACTERS</h2>
+          <div class="images-wrapper">
+            <img src="images/feature-characters.jpg" alt="キャラクターイメージ">
+          </div>
+        </a>
+      </section>
+      <section class="feature-area-section">
+        <a href="voice-cast.html">
+          <h2>VOICE CAST</h2>
+          <div class="images-wrapper">
+            <img src="images/feature-voicecast.jpg" alt="ボイスキャストイメージ">
+          </div>
+        </a>
+      </section>
+      <section class="feature-area-section">
+        <a href="teaser.html">
+          <h2>TEASER</h2>
+          <div class="images-wrapper">
+            <img src="images/teaser.jpg" alt="ティジャーイメージ">
+          </div>
+        </a>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <nav class="footer-navigation">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="story.html">STORY</a></li>
+          <li><a href="characters.html">CHARACTERS</a></li>
+          <li><a href="voice-cast.html">VOICE CAST</a></li>
+          <li><a href="teaser.html">TEASER</a></li>
+        </ul>
+      </nav>
+      <div class="footer-info">
+        <small>&copy; 2019 TENKI NO KO</small>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+      function slideSwitch() {
+        const $active = $('#slideshow IMG.active').length
+          ? $('#slideshow IMG.active')
+          : $('#slideshow IMG:last');
+        const $next = $active.next().length
+          ? $active.next()
+          : $('#slideshow IMG:first');
+        $active.addClass('last-active');
+        $next
+          .css({ opacity: 0 })
+          .addClass('active')
+          .animate({ opacity: 1 }, 1000, function () {
+            $active.removeClass('active last-active');
+          });
+      }
+      // 3秒ごとにスライドを切り替え
+      $(function () {
+        setInterval(slideSwitch, 3000);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,500 @@
+@charset "UTF-8";
+
+
+@import url("normalize.css"); /* ------- Reset all CSS Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+
+:root {
+  --header-offset: 110px; /* will be overridden by JS */
+}
+
+
+/********************
+
+共通
+
+******************************/
+
+* {
+  box-sizing: border-box;
+}
+
+/* https://developer.mozilla.org/ja/docs/Web/CSS/box-sizing */
+
+body {
+  font-family: 'Noto Serif Display', 'Noto Serif JP', 'M PLUS Rounded 1c', YuGothic, "游ゴシック Medium", "Yu Gothic", serif;
+  background-color: #f2f2f2f2;
+}
+
+/* 共通　ヘッダー・メインナビゲーション */
+
+.header {
+  width: 100%;
+  background-color: #f2f2f2f2;
+}
+
+.header-wrapper {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 50%;
+}
+
+.header-logo h1 {
+  margin: 10px 0 0 0;
+}
+
+.header-logo img {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 180px;
+  height: auto;
+}
+
+.navigation-main {
+  width: 60%;
+  margin-right: 20px;
+}
+
+.navigation-main ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-main ul li {
+  padding: 10px 18px;
+  font-weight: bold;
+}
+
+.navigation-main ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: 0.3s;
+  white-space: nowrap; /* prevent VOICE CAST from wrapping to two lines */
+}
+
+.navigation-main ul li a:hover {
+  color: #87CEEB;
+}
+
+/* 共通　フッター */
+
+.footer {
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #f2f2f2f2;
+}
+
+.footer-navigation {
+  width: 100%;
+}
+
+.footer-navigation ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-navigation ul li {
+  margin: 0 40px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer-navigation ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: 0.3s;
+}
+
+.footer-navigation ul li a:hover {
+  color: #87CEEB;
+}
+
+.footer-copyright {
+  color: #1a1a1a;
+}
+
+
+/********************
+
+index.html
+
+**************************************************/
+
+/* index.html　メインビジュアル */
+
+.main-visual {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.main-visual img {
+  width: 100%;
+}
+
+/* index.html イントロテキスト部分 */
+
+
+/* index.html バナーエリア */
+
+.feature-area {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+.feature-area-section {
+  width: 30%;
+  padding: 20px;
+}
+
+.feature-area-section h2 {
+  margin: 5px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.feature-area-section img {
+  width: 100%;
+}
+
+.feature-area-section a img {
+  transition: opacity 0.3s;
+}
+
+.feature-area-section a:hover img {
+  opacity: 0.6;
+}
+
+.feature-area-section a {
+  text-decoration: none;
+  color: #87CEEB;
+  transition: 0.3s;
+}
+
+.feature-area-section a:hover {
+  color: #87CEEB;
+}
+
+
+/********************
+
+その他のページ
+
+**************************************************/
+
+/* 共通 */
+
+.main-visual-secondpage {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: #f2f2f2;
+}
+
+.main-visual-secondpage img {
+  width: 960px;
+}
+
+.content-wrapper {
+  width: 960px;
+  margin: auto;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+.content-wrapper h2 {
+  font-size: 58px;
+  font-weight: bold;
+  color: #87CEEB;
+}
+
+/* STORY page *********************/
+
+.content-text-story {
+  width: 50%;
+}
+
+.content-text-story p {
+  margin-top: 50px; /* increased spacing */
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.content-img-story {
+  width: 50%;
+  margin-top: 40px; /* 기존 140px에서 조정 */
+  display: flex; /* flexbox 사용 */
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  gap: 20px; /* 각 iframe 사이 간격 추가 */
+  padding: 0 0 0 40px;
+}
+
+.content-img-story iframe {
+  max-width: 100%; /* 부모 요소 너비를 넘지 않도록 설정 */
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.content-img-story img {
+  padding: 150px 0px 20px 20px;
+  width: 100%;
+}
+
+/* CHARACTER page *********************/
+
+.content-text-character {
+  width: 50%;
+}
+
+.content-text-title-character {
+  margin: 0;
+  font-size: 42px;
+  font-weight: bold;
+  color: #87CEEB;
+  line-height: 1.2;
+}
+
+.content-text-secondtitle-character {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #a8a8a8;
+}
+
+.content-text-body-character {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.content-img-character {
+  width: 50%;
+}
+
+.content-img-character img {
+  padding: 10px 10px 20px 40px;
+  width: 100%;
+}
+
+/* VOICE CAST page *********************/
+
+.content-text-voicecast {
+  width: 40%;
+  text-align: right;
+}
+
+.content-text-title-voicecast {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #87CEEB;
+  line-height: 1.2;
+}
+
+.content-text-secondtitle-voicecast {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #a8a8a8;
+}
+
+.content-img-voicecast {
+  width: 60%;
+}
+
+.content-img-voicecast img {
+  padding: 0px 10px 20px 40px;
+  width: 100%;
+}
+
+/* ▼ 슬라이드 쇼를 위한 CSS 추가 ▼ */
+
+/* 슬라이드 쇼 컨테이너 */
+
+#slideshow {
+  position: relative; /* 내부 이미지들의 위치 기준점 */
+  height: 700px; /* 컨테이너 높이를 지정해야 이미지가 겹쳐도 레이아웃이 깨지지 않습니다. 이미지 높이에 맞게 조절하세요. */
+}
+
+/* 슬라이드 쇼 내부 이미지들 */
+
+#slideshow IMG {
+  position: absolute; /* 모든 이미지를 겹치게 함 */
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 컨테이너에 맞게 이미지 크기 조정 */
+  object-fit: cover; /* 이미지가 컨테이너에 꽉 차도록 설정 */
+  opacity: 0; /* 기본적으로 모든 이미지를 투명하게 */
+  transition: opacity 1s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+/* 현재 활성화된(보이는) 이미지 */
+
+#slideshow IMG.active {
+  opacity: 1; /* 활성화된 이미지만 보이게 함 */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== Teaser Page: Full-screen Video ========== */
+
+.teaser-page .wrapper {
+  max-width: none; /* remove 960px constraint */
+  width: 100%;
+  padding: 0;
+}
+
+/* header also full‑width on teaser page */
+
+.teaser-page .header-wrapper {
+  width: 960px; /* same as other pages */
+  margin: 0 auto;
+}
+
+/* teaser page header in normal flow, styled background */
+
+.teaser-page .header {
+  position: relative; /* keep in normal document flow */
+  width: 100%;
+  background: #f2f2f2f2; /* original header bg */
+  z-index: 10; /* above video but normal */
+}
+
+/* hero section fills remaining viewport */
+
+.teaser-hero {
+  width: 100%;
+  height: calc(100vh - var(--header-offset));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* video scales to cover width or height while keeping 16:9 */
+
+.teaser-hero .hero-video {
+  width: 90%; /* keep the same horizontal size */
+  max-width: 1400px;
+  max-height: 88vh; /* limit vertical size */
+  aspect-ratio: 16 / 9; /* maintain 16:9 inside this box */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* in case iframe exceeds height */
+}
+
+.teaser-hero .hero-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Fallback for ultra‑wide screens */
+
+@media (min-aspect-ratio: 16/9) {
+  .teaser-hero .hero-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* Fallback for tall/narrow screens */
+
+@media (max-aspect-ratio: 16/9) {
+  .teaser-hero .hero-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* delayed slide-up so text appears shortly after image */
+
+.slide-up-late {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .8s ease-out .5s, transform .8s ease-out .5s;
+}
+
+.slide-up-late.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* extra vertical spacing between consecutive content-wrapper sections */
+
+.content-wrapper + .content-wrapper {
+  margin-top: 100px; /* adjust as desired */
+}
+
+/* === Scroll‑zoom Effect for .main-visual-secondpage === */
+.zoom-section {
+  height: 150vh;             /* Controls how long the image stays fixed while zooming */
+}
+
+.zoom-section .main-visual-secondpage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.zoom-section .main-visual-secondpage img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+/* === End Scroll‑zoom Effect === */

@@ -1,0 +1,133 @@
+===タイトル===
+
+café5963
+
+
+===ナビゲーション===
+
+ホーム
+メニュー
+アクセス
+お問い合わせ
+
+café5963　ブランジェリー・カフェ
+
+
+営業時間
+ブランジェリー：9:00～21:00
+カフェ：9:00～23:00
+年中無休
+
+
+===フッター===
+
+Copyright 2021 café5963
+
+
+===index.html===
+
+café5963
+café5963は恵比寿ガーデンプレイス内にあるカフェです。
+2003年パリに開店した同名のカジュアルフレンチレストランの日本第1号店です。
+
+café5963のコーヒー
+コーヒー豆のおいしさはもちろん、栽培方法から出荷までのプロセスを確認し、高い品質基準に達した安心で安全な豆だけを輸入しています。
+
+café5963のパン
+独自に契約栽培したフランス産小麦を使用した、かめばかむほど味わいの深い5963のパン。バゲットやカンパーニュ、セイグル、フルート・アンシェンヌ、カンパーニュ・オ・フィグ・ノアなど。
+
+
+===menu.html===
+
+café5963　メニュー
+
+Entrées / Starters前菜
+Poissons / Seafoodお魚料理
+Viandes / Meatお肉料理
+Desserts / デザート
+
+
+Entrées / Starters前菜
+
+Saumon mariné / Marinated salmon ¥1,800
+サーモンマリネ
+
+Jambon de Parme / Assorted of Parma ham ¥1,900
+パルマ産生ハム
+
+Terrine de foie gras / Terrine of foie gras ¥2,700
+フォアグラのテリーヌ
+
+Moules Marinières(Japon) 500g / Mussels "mariniere" ¥1,600
+ムール貝の白ワイン蒸し
+
+Escargots à la Bourguignonne / Burgundy-style escargots ¥1,900
+エスカルゴブルゴーニュ風
+
+
+Poissons / Seafoodお魚料理
+
+Sole meunière / Sauteed sole meuniere ¥2,900
+舌平目のムニエル
+
+St-Jacques ｇrillée / Grilled scallops ¥2,850
+ホタテ貝の炭火焼
+
+Poisson du jour / Today's fish 時価
+本日の鮮魚
+
+
+Viandes / Meatお肉料理
+
+Confit de canard / Preserved duck ¥2,470
+鴨のコンフィ
+
+Choucroute / Sauerkraut ¥2,600
+シュークルート
+
+Carrés d’agneau rôti ou grillés / Roasted or grilled loin of lamb ¥2,940
+仔羊のローストまたはグリル
+
+
+Desserts / デザート
+
+Crème d’angers ¥850
+クレームダンジェ
+
+Salade de fruits / Fruits salad ¥850
+フルーツサラダ
+
+Crème Amélie / Creme brulée ¥650
+クレームアメリ
+
+Profiteroles ¥850
+プロフィットロール
+
+Mousse au chocolat / Chocolate mousse ¥850
+ムースオショコラ
+
+
+＊「¥」はHTML特殊文字なので「&yen;」を使用します。
+参考サイト
+http://e-words.jp/p/r-htmlentity.html
+
+
+===contact.html===
+
+お問い合わせ
+お名前
+Email
+メッセージ
+
+
+===access.html===
+
+アクセス
+住所	東京都目黒区三田
+電話	03-3742-5306
+e-mail	cafe5963@ovdesign.jp
+
+
+===googlemap===
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12969.670501824836!2d139.714317!3d35.642080999999976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDM4JzMxLjQiTiAxMznCsDQyJzUyLjQiRQ!5e0!3m2!1sja!2sjp!4v1401348576836" width="600" height="450" frameborder="0" style="border:0"></iframe>

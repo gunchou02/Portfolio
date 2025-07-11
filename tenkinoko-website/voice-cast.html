@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="映画ザ・バットマンオフィシャルサイト">
+    <meta name="keywords" content="ザ・バットマン, 映画, ロードショウ">
+    <title>VOICE CAST</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document.querySelectorAll('.slide-up, .slide-up-late,.fade-in').forEach(el => observer.observe(el));
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const section = document.querySelector('.zoom-section');
+        if (!section) return;
+        const img = section.querySelector('img');
+
+        const onScroll = () => {
+          const rect = section.getBoundingClientRect();
+          const progress = Math.min(Math.max(-rect.top / (section.offsetHeight - window.innerHeight), 0), 1);
+          const scale   = 1 + progress * 0.6;        // up to 1.4× zoom
+          const opacity = 1 - progress * 0.4;        // fades to 0.6
+          img.style.transform = `scale(${scale})`;
+          img.style.opacity   = opacity;
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll(); // initialize
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header-wrapper">
+          <div class="header-logo">
+            <h1>
+              <a href="index.html">
+                <img src="images/img-logo.png" alt="天気の子">
+              </a>
+            </h1>
+          </div>
+
+          <!-- Main Navigation -->
+          <nav class="navigation-main">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="story.html">STORY</a></li>
+              <li><a href="characters.html">CHARACTERS</a></li>
+              <li><a href="voice-cast.html">VOICE CAST</a></li>
+              <li><a href="teaser.html">TEASER</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Visual with scroll‑zoom -->
+      <section class="zoom-section">
+        <div class="main-visual-secondpage">
+          <img src="images/mainvisual-secondpage.jpg" alt="Main Image">
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <main>
+        <section class="content-wrapper">
+          <div class="content-text-voicecast fade-in">
+            <h2>VOICE CAST</h2>
+          </div>
+        </section>
+
+        <section class="content-wrapper">
+          <div class="content-text-voicecast">
+            <p class="content-text-title-voicecast slide-up-late">森嶋 帆高</p>
+            <p class="content-text-secondtitle-voicecast slide-up-late">醍醐 虎汰朗</p>
+          </div>
+          <div class="content-img-voicecast">
+            <img src="images/voicecast01.jpg" class="right slide-up" alt="キャラクターイメージ1">
+          </div>
+        </section>
+
+        <section class="content-wrapper">
+          <div class="content-text-voicecast">
+            <p class="content-text-title-voicecast slide-up-late">天野 陽菜</p>
+            <p class="content-text-secondtitle-voicecast slide-up-late">森 七菜</p>
+          </div>
+          <div class="content-img-voicecast">
+            <img src="images/voicecast02.jpg" class="right slide-up" alt="キャラクターイメージ2">
+          </div>
+        </section>
+
+        <section class="content-wrapper">
+          <div class="content-text-voicecast">
+            <p class="content-text-title-voicecast slide-up-late">須賀 圭介</p>
+            <p class="content-text-secondtitle-voicecast slide-up-late">小栗 旬</p>
+          </div>
+          <div class="content-img-voicecast">
+            <img src="images/voicecast03.jpg" class="right slide-up" alt="キャラクターイメージ3">
+          </div>
+        </section>
+
+        <section class="content-wrapper">
+          <div class="content-text-voicecast">
+            <p class="content-text-title-voicecast slide-up-late">須賀 夏美</p>
+            <p class="content-text-secondtitle-voicecast slide-up-late">本田 翼</p>
+          </div>
+          <div class="content-img-voicecast">
+            <img src="images/voicecast04.jpg" class="right slide-up" alt="キャラクターイメージ4">
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <nav class="footer-navigation">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="story.html">STORY</a></li>
+            <li><a href="characters.html">CHARACTERS</a></li>
+            <li><a href="voice-cast.html">VOICE CAST</a></li>
+            <li><a href="teaser.html">TEASER</a></li>
+          </ul>
+        </nav>
+        <div class="footer-copyright">
+          <small>&copy; 2019 TENKI NO KO</small>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

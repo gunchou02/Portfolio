@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="映画ザ・バットマンオフィシャルサイト">
+  <meta name="keywords" content="ザ・バットマン, 映画, ロードショウ">
+  <title>TEASER</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="teaser-page">
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-wrapper">
+        <div class="header-logo">
+          <h1>
+            <a href="index.html">
+              <img src="images/img-logo.png" alt="天気の子">
+            </a>
+          </h1>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="navigation-main">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="story.html">STORY</a></li>
+            <li><a href="characters.html">CHARACTERS</a></li>
+            <li><a href="voice-cast.html">VOICE CAST</a></li>
+            <li><a href="teaser.html">TEASER</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+      <!-- Hero Teaser Video -->
+      <section class="teaser-hero">
+        <div class="hero-video">
+          <iframe
+            width="1920"
+            height="1080"
+            src="https://www.youtube.com/embed/rzKcrJ77wBY?autoplay=0&amp;controls=1&amp;rel=0&amp;playsinline=1"
+            title="Teaser Trailer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <nav class="footer-navigation">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="story.html">STORY</a></li>
+          <li><a href="characters.html">CHARACTERS</a></li>
+          <li><a href="voice-cast.html">VOICE CAST</a></li>
+          <li><a href="teaser.html">TEASER</a></li>
+        </ul>
+      </nav>
+      <div class="footer-info">
+        <small>&copy; 2019 TENKI NO KO</small>
+      </div>
+    </footer>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('.header');
+        if (header) {
+          const h = header.getBoundingClientRect().height;
+          document.documentElement.style.setProperty('--header-offset', `${h}px`);
+        }
+      });
+    </script>
+
+  </div>
+</body>
+</html>

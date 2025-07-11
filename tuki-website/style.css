@@ -1,0 +1,700 @@
+:root {
+  --main-purple: 23, 24, 58;
+  --text-color: #f0f8ff;
+  --point-color: #f0f8ff;
+  --serif-font: "Noto Serif JP", serif;
+  --sans-serif-font: "Noto Sans JP", sans-serif;
+}
+body {
+  color: var(--text-color);
+  font-family: var(--sans-serif-font);
+  margin: 0;
+  line-height: 1.8;
+  background-color: rgb(var(--main-purple));
+}
+body.modal-open {
+  overflow: hidden;
+}
+.menu-toggle {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  width: 30px;
+  height: 26px;
+  z-index: 2000;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+}
+.menu-toggle span:not(:last-child) {
+  margin-bottom: 6px;
+}
+.menu-toggle.active {
+  background-color: transparent !important;
+}
+.menu-toggle.active span {
+  background-color: white;
+}
+.menu-toggle.active span:nth-child(1),
+.menu-toggle.active span:nth-child(4) {
+  opacity: 0;
+  transform: scale(0);
+}
+.menu-toggle.active span:nth-child(2) {
+  transform: translateY(4px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 1000;
+}
+.menu-overlay.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+.overlay-nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.overlay-nav li {
+  margin-bottom: 2rem;
+}
+.overlay-nav a {
+  font-family: var(--serif-font);
+  font-size: 2.5rem;
+  color: #f0f8ff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.overlay-nav a:hover {
+  opacity: 1;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("https://tuki-official.net/s3/skiyaki/uploads/link/image/55202/32146_topimage_pc.jpg")
+    no-repeat center center/cover;
+  background-attachment: fixed;
+  filter: blur(8px);
+  transition: filter 1.5s ease-out;
+}
+body.loaded .hero {
+  filter: none;
+}
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+  color: var(--point-color);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, color 0.3s;
+  z-index: 1500;
+  text-decoration: none;
+}
+#scrollToTopBtn:hover {
+  color: white;
+}
+#scrollToTopBtn.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+.hero-content h1 {
+  font-family: var(--serif-font);
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.hero-content p {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 50px;
+}
+.main-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 50px;
+  text-align: center;
+}
+.section-title {
+  font-family: var(--serif-font);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cta-button {
+  background-color: var(--point-color);
+  color: rgb(var(--main-purple));
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+.cta-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.card {
+  background-color: rgba(var(--main-purple));
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  flex: 1 1 300px;
+  max-width: 380px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+.card-category {
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+.card h3 {
+  margin-top: 0;
+  font-family: var(--serif-font);
+}
+.card-date {
+  margin-top: auto;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 5000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal-overlay.is-open {
+  display: flex;
+}
+.modal-content {
+  background: rgba(var(--main-purple), 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  position: relative;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.modal-close-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.news-modal-body {
+  max-height: calc(90vh - 80px);
+  overflow-y: auto;
+}
+.news-modal-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.news-modal-text .modal-category {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+}
+.news-modal-text .modal-title {
+  font-family: var(--serif-font);
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.news-modal-text .modal-date {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.news-modal-text .modal-main-text {
+  line-height: 1.8;
+}
+.news-modal-text .news-modal-link {
+  margin-top: 20px;
+}
+.modal-body {
+  display: flex;
+  gap: 40px;
+  max-height: calc(90vh - 80px);
+  overflow-y: auto;
+}
+.modal-album-art {
+  flex: 0 0 300px;
+}
+.modal-album-art img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.modal-track-info {
+  flex: 1;
+  min-width: 0;
+}
+.modal-track-info .modal-title {
+  font-family: var(--serif-font);
+  font-size: 2.8rem;
+  margin: 0 0 5px 0;
+}
+.modal-track-info .modal-date {
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+.modal-track-info .modal-streaming-btn {
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .modal-album-art {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .modal-title,
+  .news-modal-text .modal-title {
+    font-size: 2rem;
+  }
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+.video-item {
+  background-color: transparent;
+}
+.video-responsive-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 1px solid rgba(240, 248, 255, 0.5);
+}
+.video-responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-title {
+  font-family: var(--serif-font);
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--point-color);
+}
+.profile-text {
+  max-width: 500px;
+}
+.profile-text h3 {
+  font-family: var(--serif-font);
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.profile-text ul {
+  list-style-type: "- ";
+  padding-left: 20px;
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.menu-overlay.active .overlay-nav a {
+  opacity: 0;
+  position: relative;
+  animation: glitch 0.5s forwards;
+}
+.menu-overlay.active .overlay-nav a::before,
+.menu-overlay.active .overlay-nav a::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.menu-overlay.active .overlay-nav a::before {
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  animation: glitch-once 0.6s forwards;
+}
+.menu-overlay.active .overlay-nav a::after {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  animation: glitch-once 0.6s reverse forwards;
+}
+@keyframes glitch-once {
+  0% {
+    clip-path: inset(10% 0 85% 0);
+    opacity: 1;
+  }
+  20% {
+    clip-path: inset(80% 0 5% 0);
+    opacity: 1;
+  }
+  40% {
+    clip-path: inset(45% 0 45% 0);
+    opacity: 1;
+  }
+  60% {
+    clip-path: inset(90% 0 2% 0);
+    opacity: 1;
+  }
+  80% {
+    clip-path: inset(5% 0 90% 0);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(50% 0 50% 0);
+    opacity: 0;
+  }
+}
+.menu-overlay.active .overlay-nav li:nth-child(1) a {
+  animation-delay: 0.1s;
+}
+.menu-overlay.active .overlay-nav li:nth-child(2) a {
+  animation-delay: 0.2s;
+}
+.menu-overlay.active .overlay-nav li:nth-child(3) a {
+  animation-delay: 0.3s;
+}
+.menu-overlay.active .overlay-nav li:nth-child(4) a {
+  animation-delay: 0.4s;
+}
+.menu-overlay.active .overlay-nav li:nth-child(5) a {
+  animation-delay: 0.5s;
+}
+.social-links-container {
+  padding-top: 20px;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.social-links a {
+  font-size: 2rem;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.social-links a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.menu-overlay.active .social-links-container {
+  opacity: 0;
+  animation: fadeInIcons 0.5s forwards;
+  animation-delay: 0.6s;
+}
+@keyframes fadeInIcons {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles for Discography Section */
+
+.slider-container {
+  /* Establishes positioning context for buttons */
+  position: relative;
+}
+
+.music-grid {
+  display: flex;
+  gap: 30px;
+  /* Add padding to prevent items from being cut off at the edges */
+  padding: 0 10px;
+
+  /* Core of the slider: enable horizontal scrolling */
+  overflow-x: scroll;
+  /* Snap to items when scrolling comes to a halt */
+  scroll-snap-type: x mandatory;
+
+  /* Hide the default scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.music-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.music-item {
+  /* Prevent items from shrinking or growing */
+  flex: 0 0 auto;
+  /* Show 3 items, considering the gap */
+  width: calc(33.333% - 20px);
+  /* Defines the snap alignment point */
+  scroll-snap-align: center;
+  border-radius: 8px;
+}
+
+.music-item .album-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Slider Button Styles --- */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(23, 24, 58, 0.7);
+  color: var(--text-color);
+  border: 1px solid var(--point-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+}
+.slider-btn:hover {
+  background-color: var(--point-color);
+  color: rgb(var(--main-purple));
+  transform: translateY(-50%) scale(1.1);
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+}
+
+/* --- Music Modal Styles --- */
+.modal-release-type {
+  font-weight: bold;
+  color: var(--point-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+.tracklist-container {
+  margin-top: 25px;
+}
+.tracklist-container h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+  font-family: var(--serif-font);
+}
+.tracklist {
+  padding-left: 20px;
+  list-style-type: decimal-leading-zero;
+}
+.tracklist li {
+  margin-bottom: 10px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* --- Responsive Adjustments / Media Queries --- */
+@media (max-width: 1024px) {
+  .music-item {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 768px) {
+  .music-item {
+    width: 90%;
+  }
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .prev-btn {
+    left: -10px;
+  }
+  .next-btn {
+    right: -10px;
+  }
+}
+
+/* Add or replace the following in your style.css */
+
+#star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(23, 24, 58);
+  overflow: hidden;
+}
+
+/* Find this section in your style.css and update it as follows */
+
+/* Base styles for stars generated via JavaScript */
+.star {
+  position: absolute;
+  /* background-color: white; <-- This line is removed in favor of color classes */
+  border-radius: 50%;
+  animation-name: twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Add the new styles below */
+.star.white {
+  background-color: white;
+}
+.star.blue {
+  /* A subtle blue to match the theme */
+  background-color: #a2d2ff;
+}
+
+/* Keyframes for the star twinkling effect */
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}

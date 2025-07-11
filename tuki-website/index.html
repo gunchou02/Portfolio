@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tuki.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="star-background"></div>
+
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-label="menu-toggle"
+      aria-expanded="false"
+      aria-controls="menu-overlay"
+    >
+      <span></span><span></span><span></span><span></span>
+    </button>
+
+    <div class="menu-overlay" id="menu-overlay">
+      <nav class="overlay-nav">
+        <ul>
+          <li><a href="#home" data-text="HOME">HOME</a></li>
+          <li><a href="#news" data-text="NEWS">NEWS</a></li>
+          <li><a href="#video" data-text="VIDEO">VIDEO</a></li>
+          <li>
+            <a href="#discography" data-text="DISCOGRAPHY">DISCOGRAPHY</a>
+          </li>
+          <li><a href="#profile" data-text="PROFILE">PROFILE</a></li>
+          <li class="social-links-container">
+            <div class="social-links">
+              <a
+                href="https://twitter.com/tuki_music_"
+                target="_blank"
+                aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@tuki.music_official"
+                target="_blank"
+                aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/tuki.music.official/"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <h1 class="hidden">tuki.</h1>
+        </div>
+      </section>
+
+      <section class="content-section" id="news">
+        <h2 class="section-title hidden">NEWS</h2>
+        <div class="card-container">
+          <div
+            class="card hidden"
+            data-category="LIVE"
+            data-title="『NIPPON BUDOKAN ～承認欲求爆発～』6/17(火)19:00〜チケットオフィシャル4次先行(先着)受付開始！"
+            data-date="2025.06.16"
+            data-img-src="https://tuki-official.net/s3/skiyaki/uploads/ckeditor/pictures/726546/content_IMG_1378.JPG"
+            data-text="tuki.日本武道館公演 LIVE 2026.02.11"
+            data-link-url="https://eplus.jp/tuki._budokan/"
+          >
+            <span class="card-category live">LIVE</span>
+            <h3>
+              『NIPPON BUDOKAN
+              ～承認欲求爆発～』6/17(火)19:00〜チケットオフィシャル4次先行(先着)受付開始！
+            </h3>
+            <p class="card-date">2025.06.16</p>
+          </div>
+          <div
+            class="card hidden"
+            data-category="RELEASE"
+            data-title="tuki.新曲「ストレンジャーズ」デジタル配信開始！"
+            data-date="2025.06.09"
+            data-img-src="https://tuki-official.net/s3/skiyaki/uploads/ckeditor/pictures/740965/content_S__118685759.jpg"
+            data-text="TBS系 日曜劇場「キャスター」の劇中歌、新曲『ストレンジャーズ』の配信がスタートしました！"
+            data-link-url="https://lnk.to/strangerz_"
+          >
+            <span class="card-category release">RELEASE</span>
+            <h3>tuki.新曲「ストレンジャーズ」デジタル配信開始！</h3>
+            <p class="card-date">2025.06.09</p>
+          </div>
+          <div
+            class="card hidden"
+            data-category="MEDIA"
+            data-title="tuki.『騙シ愛』Music Videoが解禁"
+            data-date="2025.06.06"
+            data-img-src="https://tuki-official.net/s3/skiyaki/uploads/ckeditor/pictures/740707/content_S__118652937.jpg"
+            data-text="TBS系 日曜劇場「キャスター」の主題歌、『騙シ愛』のOfficial Music Videoが解禁されました。"
+            data-link-url="https://www.youtube.com/watch?v=4_Lc458W1EY"
+          >
+            <span class="card-category media">MEDIA</span>
+            <h3>tuki.『騙シ愛』Music Videoが解禁</h3>
+            <p class="card-date">2025.06.06</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="video">
+        <h2 class="section-title hidden">VIDEO</h2>
+        <div class="video-grid hidden">
+          <div class="video-item">
+            <div class="video-responsive-wrapper">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/4_Lc458W1EY?si=Yn5rHdxzD7pbguQu"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3 class="video-title">
+              tuki. - Damashiai (Official Music Video)
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="discography">
+        <h2 class="section-title hidden">DISCOGRAPHY</h2>
+        <div class="slider-container hidden">
+          <div class="music-grid">
+            <div
+              class="music-item"
+              data-title="ストレンジャーズ"
+              data-date="2025.06.09"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/213756/S__118685759.jpg"
+              data-stream-url="https://open.spotify.com/track/4aKuPX8HsRhc2hy3ediVge?si=0f264ceb2e4b4948"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/213756/S__118685759.jpg"
+                alt="ストレンジャーズ"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="声命"
+              data-date="2025.05.26"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/212830/S__118268058.jpg"
+              data-stream-url="https://open.spotify.com/track/2dcQ1Z2RkZOcZ5XrHr1kF8?si=7bf4ae0dd23245ca"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/212830/S__118268058.jpg"
+                alt="声命"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="騙シ愛"
+              data-date="2025.04.14"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/208701/20250414_damashiai.jpg"
+              data-stream-url="https://open.spotify.com/track/48N9nuZilWYtqAKqxVPtAR?si=e02c1566e92c494c"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/208701/20250414_damashiai.jpg"
+                alt="騙シ愛"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="1st Album 15"
+              data-date="2025.01.08"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/198682/01_album_jk_s.jpg"
+              data-stream-url="https://open.spotify.com/album/2KWmZgT2rfPaTHfr0QQKfD?si=Nfu9tImxSqK86DixQ4_P9g"
+              data-type="album"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/198682/01_album_jk_s.jpg"
+                alt="1st Album '15'"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="アイモライモ"
+              data-date="2024.11.06"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/191013/%E3%82%A2%E3%82%A4%E3%83%A2%E3%83%A9%E3%82%A4%E3%83%A2.jpg"
+              data-stream-url="https://open.spotify.com/track/5d0dz0ekefZ243cWDGiDJ1?si=31d3dff694e14417"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/191013/%E3%82%A2%E3%82%A4%E3%83%A2%E3%83%A9%E3%82%A4%E3%83%A2.jpg"
+                alt="アイモライモ"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="愛の賞味期限"
+              data-date="2024.09.29"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/188547/ainoshoumikigen_800px.jpg"
+              data-stream-url="https://open.spotify.com/track/1tMKcu6AdZWytIqkT4EisT?si=b4fd9af253b14730"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/188547/ainoshoumikigen_800px.jpg"
+                alt="愛の賞味期限"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="ひゅるりらぱっぱ"
+              data-date="2024.07.24"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/183564/hyururirappa_s_800px.jpg"
+              data-stream-url="https://open.spotify.com/track/0J8JXuvQADkec6AThPGzjR?si=19fa79e78faa46be"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/183564/hyururirappa_s_800px.jpg"
+                alt="ひゅるりらぱっぱ"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="星街の駅で"
+              data-date="2024.06.19"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/180057/20240216_%E6%98%9F%E8%A1%97%E3%81%AE%E9%A7%85%E3%81%A6%E3%82%99_JK_s.jpeg"
+              data-stream-url="https://open.spotify.com/track/6JgazBWIYH1tHOuGEcxLes?si=b6110768930a4e37"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/180057/20240216_%E6%98%9F%E8%A1%97%E3%81%AE%E9%A7%85%E3%81%A6%E3%82%99_JK_s.jpeg"
+                alt="星街の駅で"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="地獄恋文"
+              data-date="2024.04.16"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/176326/%E5%9C%B0%E7%8D%84%E6%81%8B%E6%96%87_JK%E5%86%99_s.jpeg"
+              data-stream-url="https://open.spotify.com/track/7eUt3Ed2PSocfPSVaNhAEI?si=79d4566f2ff5429f"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/176326/%E5%9C%B0%E7%8D%84%E6%81%8B%E6%96%87_JK%E5%86%99_s.jpeg"
+                alt="地獄恋文"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="サクラキミワタシ"
+              data-date="2024.01.10"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170302/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%AD%E3%83%9F%E3%83%AF%E3%82%BF%E3%82%B7_JK%E5%86%99_s.jpeg"
+              data-stream-url="https://open.spotify.com/track/4bM9itWEyMkLUSd2VeROAd?si=eaaae601a36c4fce"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170302/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%AD%E3%83%9F%E3%83%AF%E3%82%BF%E3%82%B7_JK%E5%86%99_s.jpeg"
+                alt="サクラキミワタシ"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="一輪花"
+              data-date="2023.11.28"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170301/%E4%B8%80%E8%BC%AA%E8%8A%B1_JK%E5%86%99_s.jpeg"
+              data-stream-url="https://open.spotify.com/track/456rgV2smcOpAhhSlQVPK8?si=e2943853cb794b9a"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170301/%E4%B8%80%E8%BC%AA%E8%8A%B1_JK%E5%86%99_s.jpeg"
+                alt="一輪花"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="晩餐歌 (弾き語り ver)"
+              data-date="2023.10.17"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170300/%E6%99%A9%E9%A4%90%E6%AD%8C_JK%E5%86%99_s.jpeg"
+              data-stream-url="https://open.spotify.com/track/1tS8mrZW46pZCvAH3YKVZk?si=3a77f36cf80e40f0"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170300/%E6%99%A9%E9%A4%90%E6%AD%8C_JK%E5%86%99_s.jpeg"
+                alt="晩餐歌 (弾き語り ver)"
+              />
+            </div>
+            <div
+              class="music-item"
+              data-title="晩餐歌"
+              data-date="2023.09.28"
+              data-img-src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170299/bansanka.jpg"
+              data-stream-url="https://open.spotify.com/track/2cxcqKwQtfKq7giphxjzOu?si=bacecc412f4f48a3"
+              data-type="digital-single"
+            >
+              <img
+                class="album-art"
+                src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170299/bansanka.jpg"
+                alt="晩餐歌"
+              />
+            </div>
+          </div>
+          <button class="slider-btn prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="content-section" id="profile">
+        <h2 class="section-title hidden">PROFILE</h2>
+        <div class="profile-container hidden">
+          <img
+            src="https://tuki-official.net/s3/skiyaki/uploads/image/file/170299/bansanka.jpg"
+            alt="profile-image"
+            class="profile-image"
+          />
+          <div class="profile-text">
+            <h3>tuki.</h3>
+            <p>
+              2023年に「晩餐歌」でデビューしたシンガーソングライター。<br />心に響くメロディーと独特の世界観を持つ歌詞で、多くのリスナーから支持を得ている。<br />作詞・作曲からアレンジまで自身で手掛けるマルチな才能を持つ。
+            </p>
+            <ul>
+              <li><strong>デビュー :</strong> 2023年</li>
+              <li>
+                <strong>ジャンル :</strong> J-POP, 代表曲, アコースティック
+              </li>
+              <li><strong>代表曲 :</strong> 晩餐歌, 一縷, サクラキミワタシ</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>© 2025 tuki. All rights reserved.</p>
+    </footer>
+
+    <a href="#" id="scrollToTopBtn" title="UP"
+      ><i class="fas fa-arrow-up"></i
+    ></a>
+
+    <div id="news-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close-btn" aria-label="CLOSE">×</button>
+        <div class="news-modal-body">
+          <img src="" alt="NEWS IMAGE" class="news-modal-img" />
+          <div class="news-modal-text">
+            <span class="modal-category"></span>
+            <h3 class="modal-title"></h3>
+            <p class="modal-date"></p>
+            <p class="modal-main-text"></p>
+            <a
+              href="#"
+              class="cta-button news-modal-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LINK</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="music-modal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close-btn" aria-label="CLOSE">×</button>
+        <div class="modal-body">
+          <div class="modal-album-art">
+            <img src="" alt="ALBUM COVER" />
+          </div>
+          <div class="modal-track-info">
+            <h3 class="modal-title"></h3>
+            <p class="modal-date"></p>
+            <p class="modal-release-type"></p>
+            <a
+              href="#"
+              class="cta-button modal-streaming-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Listen on Streaming</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
